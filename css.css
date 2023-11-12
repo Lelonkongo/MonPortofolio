@@ -1,0 +1,398 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fff;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+
+}
+.lien a:active{
+    color: red;
+    
+}
+
+
+ @-webkit-keyframes tracking-in-expand-fwd-top {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px) translateY(-500px);
+              transform: translateZ(-700px) translateY(-500px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+              transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand-fwd-top {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px) translateY(-500px);
+              transform: translateZ(-700px) translateY(-500px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+              transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  
+.motext, .hello{
+        -webkit-animation: tracking-in-expand-fwd-top 6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+                animation: tracking-in-expand-fwd-top 6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+}
+ @-webkit-keyframes color-change-4x {
+    0% {
+      background: #19dcea;
+    }
+    33.3333% {
+      background: #b22cff;
+    }
+    66.666% {
+      background: #0f0e0e;
+    }
+    100% {
+      background: #f5be10;
+    }
+  }
+  @keyframes color-change-4x {
+    0% {
+      background: #19dcea;
+    }
+    33.3333% {
+      background: #b22cff;
+    }
+    66.666% {
+      background: #ea2222;
+    }
+    100% {
+      background: #f5be10;
+    }
+  }
+  
+.bg{
+    
+        -webkit-animation: color-change-4x 6s linear infinite alternate both;
+                animation: color-change-4x 6s linear infinite alternate both;
+
+}
+
+
+.navbar{
+    box-shadow: 1px 1px 1px 1px;
+    background-color: white;
+    opacity: 5;
+    z-index: 1;
+    
+    
+}
+
+
+.haut h1 {
+    font-family: 'Cinzel', serif;
+}
+
+nav h4{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+nav h4::first-letter{
+    font-size: 35px;
+    color: red;
+}
+
+
+
+.navbar:hover n{
+    background: orangered!important;
+    color: #fff;
+}
+.lien {
+    margin-right: 20px;
+   
+}
+.lien a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+   
+}
+.navbar span{
+    margin-left: 10px;
+}
+.haut{
+    display: flex;
+   justify-content: space-around;
+    align-items: center;
+   
+    
+}
+.sociaux img{
+    width: 5%;
+    margin-right: 20px;
+}
+
+.bg{
+     
+    background-color: #1ec;
+
+}
+
+.K{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+.image{
+    position: relative;
+   /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);*/
+   /*clip-path: circle(50% at 50% 50%);*/
+   /*clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);*/
+   /* clip-path: ellipse(25% 40% at 50% 50%); METTRE FORMAT MOBILE*/
+  /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);*/
+  /*clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%); flexche*/
+  clip-path: polygon(0 0, 100% 0, 100% 98%, 35% 71%);
+    background: orangered;
+   
+    
+   
+   
+}
+.a{
+    font-weight: bolder;
+}
+.image img{
+    
+    top:0;
+    right: 20px;
+    
+}
+.text-uppercase{
+    padding-right: 90px;
+}
+nav i{
+    margin-right: 10px;
+}
+.bar-menu{
+    font-size: 35px;
+    display: none;
+    
+}
+.bar-ferme{
+    font-size: 35px;
+    margin-right: 10px;
+    display: none;
+    transition: 0.5s ease-in-out;
+    color: #fff;
+}
+.formulaire{
+    display: flex;
+    flex-direction: column;
+}
+.vert{
+   
+    padding:2px;
+    color: white;
+    margin-top: 5px;
+
+}
+small{
+    display: block;
+}
+.jav{
+    background-color: red;
+    padding:5px;
+    font-size: 17px;
+    color: white;
+    margin-top: 5px;
+
+}
+#Envoi{
+   transform: translateX(-100%);
+    
+}
+.messageErreur{
+    transform: translateX(0);
+    transition: 0.5s ease-in-out;
+         
+}
+
+@media screen and (max-width:867px) {
+    .haut{
+        display: flex;
+        flex-direction:column-reverse;
+        justify-content:center;
+        
+       
+        
+    }
+}
+@media screen and (max-width:750px) {
+    .navbar{
+        position: relative;
+    }
+    .bar-menu{
+        transition: 0.5s ease-in-out;
+        display:block;
+        
+    }
+    .navbar{
+        position: fixed;
+         
+    }
+    .lien{
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          align-items: flex-start;
+          left: 0;
+          top: 100%;
+          padding:10px;
+          background: #1ec;
+          height:auto;
+          padding-bottom: 10px;
+          width: 100vw;
+          transform: translate(-100%);
+          transition: 0.5s ease-in-out;
+         
+
+    
+   }
+   .lien a{
+   font-size: 20px;
+    display: block;
+    
+   }
+   
+   .ameneMenu{
+    transform: translate(0%);
+   }
+   .navbar .lien a{
+    margin-top: 15px;
+
+   }
+}
+
+@media screen and (max-width:608px){
+    .mobile{
+        position: absolute;
+        top: 0;
+        height:100vw;
+        width: 200px;
+        background: #1ec;
+       
+        
+    }
+    .image{
+        width: 420px;
+    }
+
+    .image img{
+        width: 420px;
+    }
+
+}
+
+@media screen and (max-width:442px){
+.haut{
+    display: flex;
+    flex-direction:column-reverse;
+}
+.image{
+    position: relative;
+   clip-path: ellipse(25% 40% at 50% 50%);
+    background: orangered; 
+   
+}
+
+.animation{
+    text-align: center;
+}
+
+
+
+}
+
+@media screen and (max-width:395px){
+    .haut{
+        display: flex;
+        flex-direction:column-reverse;
+        justify-content:center;
+        
+       
+        
+    }
+
+    
+    .sociaux img{
+        width: 10%;
+        margin-right: 10px;
+    }
+    .image{
+        width: 300px;
+       
+    }
+
+    .image img{
+        width: 300px;
+    }
+}
+
+
+
+        
+ 
+
+@media screen and (max-width:290px){
+    .haut{
+        display: flex;
+        flex-direction:column-reverse;
+        justify-content:center;
+        align-items: center;
+       
+        
+    }
+    .image{
+        width: 280px;
+       
+    }
+
+    .image img{
+        width: 250px;
+        
+    }
+  
+
+    .sociaux img{
+        width: 15%;
+        margin-right: 10px;
+    }
+}
+
+
+
+ 
+
+
+       
+    
+   
+    

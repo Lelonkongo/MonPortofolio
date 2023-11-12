@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap" rel="stylesheet"> 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontAwsome/css/all.css">
+    <title>Mes formations et leurs prix</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+          background: #fff;
+        }
+      
+        .navbar{
+    box-shadow: 1px 1px 1px 1px;
+    background-color: white;
+    opacity: 5;
+    z-index: 1;
+    
+}
+nav h4{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+nav h4::first-letter{
+    font-size: 35px;
+    color: orange;
+}
+
+.lien a:active{
+  color: red;
+}
+
+
+.lien {
+    margin-right: 20px;
+   
+}
+.lien a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+   
+}
+.navbar span{
+    margin-left: 10px;
+}
+        .container-fluid{
+            margin: 0;
+            padding: 0;
+        }
+     
+ 
+
+.menu img {
+  width: 10%;
+}
+
+i{
+  margin-right: 9px;
+}
+
+.cardre-img img {
+  width: 8%;
+}
+.img-formation{
+  width: 7%;
+}
+.haut{
+    display: flex;
+   justify-content: space-around;
+    align-items: center;
+   
+    
+}
+.bar-menu{
+  display: none;
+  font-size: 35px;
+    margin-right: 10px;
+}
+ 
+.sociaux img{
+    width: 5%;
+    margin-right: 20px;
+}
+
+.formulaire{
+    display: flex;
+    flex-direction: column;
+}
+.avantPropos{
+  font-family: 'Cinzel', serif;
+  
+}
+.message{
+  font-family: 'Cinzel', serif;
+}
+.bar-ferme{
+  font-size: 35px;
+    margin-right: 10px;
+    display: none;
+    transition: 0.5s ease-in-out;
+    
+}
+
+.vert{
+   
+   padding:2px;
+   color: white;
+   margin-top: 5px;
+
+}
+small{
+   display: block;
+}
+
+
+@media screen and (max-width:991px){
+  .haut{
+    display: flex;
+          flex-direction: column-reverse;
+  }
+  .img-formation{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:858px){
+  .haut{
+    display: flex;
+          flex-direction: column-reverse;
+  }
+
+}
+
+@media screen and (max-width:827px){
+  .lien{
+    display: flex;
+          flex-direction: column;
+          position: absolute;
+          align-items: flex-start;
+          left: 0;
+          top: 100%;
+          border-right: 1px solid wheat;
+          padding:10px;
+          background: #1ec;
+          height:300px;
+          width: 100vw;
+          transform: translateY(-200%);
+          transition: 0.5s ease-in-out;
+  }
+  .lien a{
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+  .bar-menu{
+  display:block;
+}
+  .ameneMenu{
+    transform: translate(0%);
+ 
+}
+
+  
+  
+  
+}
+
+@media screen and (max-width:768px){
+    .img-formation{
+        display: none;
+    }
+
+    .descrendre{
+      margin-top: 20px;
+    }
+}
+@media screen and (max-width:611px){
+  
+    .image{
+        width: 420px;
+        
+  }
+
+  .image img{
+        width: 420px;
+      
+    }
+
+}
+@media screen and (max-width:375px) {
+  .text{
+    color: #fff;
+    text-align:start !important;
+  }
+  .text-uppercase{
+    text-align:start !important;
+  }
+  .s2{
+    text-align:start !important;
+  
+}
+.dis{
+  display: none;
+}
+.image{
+  margin-right: 120px;
+}
+.sociaux img{
+  width: 10%;
+}
+.img-formation{
+  width: 5%;
+}
+}
+@media screen and (width:280px) {
+  .image{
+  margin-right: 120px;
+}
+  
+}
+    </style>
+</head>
+<body>
+     <!--lien-->
+     <nav class="navbar bg-dark position-fixed w-100">
+      <span><h4 class="text-white">Formations</h4></span>
+      <div class="lien">
+        <a href="index.html"><i class="fa fa-home"></i>Accueil</a>
+        <a href="#Apropos" class="enleve1">  <i id="i" class="fa fa-info-circle"></i>Avant propos</a>
+        <a href="#prix" class="enleve2"><i class="fa fa-award"></i>Prix</a>
+        <a href="#formation" class="enleve3"><i class="fa fa-graduation-cap"></i>Nos formations</a>
+        <a href="#contact" class="enleve4"><i id="i" class="fa fa-phone"></i>Contact</a>
+      </div>
+      <h3 class="bar-menu text-white"> <i class="fa fa-bars"></i></h3>
+      <h3 class="bar-ferme text-white"> <i class="fa fa-times"></i></h3>
+    </nav>
+
+
+
+
+  <!--formation-->
+  <div class="container-fluid bg-secondary p-5 text-white">
+    <div class="container haut">
+          <div class="message">
+            <h1> Devenez autonome grâce à nos formations <br>100% assure</h1>
+            <div>
+        <i class="fa fa-star " aria-hidden="true"></i>
+        <i class="fa fa-star " aria-hidden="true"></i>
+        <i class="fa fa-star " aria-hidden="true"></i>
+        <i class="fa fa-star " aria-hidden="true"></i>
+      </div>
+            <a href="#contact" class="btn btn-warning mt-3" >Contactez-moi</a>
+            <a href="#formation" class="btn btn-outline-info mt-3 text-white" >Découvrir</a>
+            <div class="sociaux mt-5">
+              <a href="https://web.facebook.com/profile.php?id=100079766285257&sk=about_contact_and_basic_info"><img src="media/facebook.png" alt=""></a>
+              <a href="mailto:mlelonkongo@gmail.com"><img src="media/gmail.png" alt=""></a>
+              <a href=""><img src="media/telegram.png" alt=""></a>
+              <a href="https//wa.me/842709316"><img src="media/whatsapp.png" alt=""></a>
+            </div>
+          </div>
+          
+      <div class="image">
+        <img src="images/DSC_2250_prev_ui.png" alt="" class="">
+      
+        
+      </div>
+    </div>
+  </div>
+
+
+<!--Avant propos-->
+<div class="container-fluid ">
+  <div class="container mt-5">
+    <div class="row">
+    <div class="col-md-7  text-center bg-light pt-5 avantPropos" data-aos="flip-left">
+      <h3 id="Apropos">Avant propos</h3>
+      <P>Nous formons toute personne qui désire devenir <b> développeur web </b> et <b> des applications Bureau(Logiciel). </b> Nos formations ne se limitent non seulement à ce point. <br>
+         Nous apprenons aussi toute personne souhaitant  plus découvrir sur l'informatique. Pour plus d'informations sur nos différentes formations, je  vous invite de parcourir notre page web. </P>
+    <a href="#formation" class="btn btn-secondary">Découvir Plus</a>
+        </div>
+
+    <div class="col-md-5   text-center" data-aos="flip-left">
+      <img src="images/bg.jpg" class="img-fluid" alt="">
+    </div>
+  </div>              
+  </div>
+
+
+</div>
+ <!--formation-->
+ <hr>
+<div class="container-fluid mescarte">
+  <h2 id="formation" class="text-center nosformation"> NOS FORMATIONS</h2>
+ <div class="container">
+
+  <div class="row d-flex justify-content-center py-4 p-2">
+    <!--Ma prémiere carte-->
+      <div class="col-md-5 bg-light shadow me-2 p-3 mt-5 border-5"  data-aos="flip-up">
+          <div class="cardre-img py-2 ">
+              <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+              <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+              <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+             
+          </div>
+          <h4 class="text-primary">Devenez développeur de site web  avec HTML5 et CSS3 et Apprenez à concevoir des sites web reponsives</h4>
+          <p>Nous formons  toute personne qui désire  dévenir  developpeur  de site web  avec HTML5 et CSS3 pendant <b>  1 mois </b> et devenir professionnel ou professionnelle</p>
+          <a href="#contact" class="btn btn-primary m-2"><i id="i" class="fa fa-phone"></i>Contactez-moi</a>
+          
+           
+            
+      </div>
+
+  <!--Ma deuxième carte-->
+      <div class="col-md-5 bg-light mt-5 shadow p-3 "  data-aos="flip-up">
+          <div class="cardre-img py-2">
+              <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+              <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+              <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+          </div>
+          <h4 class="text-primary  ">commencez,développez et créez vos sites web rapiditement avec le framework Bootstrap 5</h4>
+          <p>Nous formons egalement toute personne avec Bootstrap 5 désirant créer des sites web et de page web fantastique, facilement et rapidement en seulement <b> 3 semaines </b></p>
+          <a href="#contact" class="btn btn-light shadow text-info  m-2"><i id="i" class="fa fa-phone"></i>Contactez moi</a>
+      </div>
+
+
+
+    <!--Ma troisième carte-->
+        <div class="col-md-5 bg-light shadow me-2 p-3 mt-5"  data-aos="flip-up">
+          <div class="cardre-img py-2">
+              <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+              <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+              <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+          </div>
+          <h4 class="text-primary  ">Devenez  developpeur front-end,en apprenant le langage javascript pour concevoir de sites web dynamique  </h4>
+          <p>Nous  formons aussi, toute personne  désirant devenir développeur web front-end, de  maitriser le  langage javascript enfin de concevoir de sites web dynamiques en <b>1 mois</b></p>
+          <a href="#contact" class="btn btn-success shadow m-2"><i id="i" class="fa fa-phone"></i>Contactez moi</a>
+        </div>
+     
+
+
+    <!--Ma quatrième carte-->
+      <div class="col-md-5  bg-light shadow p-3 mt-5"  data-aos="flip-up">
+        <div class="cardre-img ">
+            <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+            <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+            <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+        </div>
+        <h4 class="text-primary  ">Apprendre à connecter vos sites web avec une base de donnée en utilisant le langage de programmation PHP</h4>
+        <p>Apprenez à interagir avec une base de donnée, en connectant vos sites web  avec ce dernier(base de donnée), nous vous formons à manipuler le langage de programmation PHP, afin de réaliser cette connexion.
+          
+        </p>
+        <a href="#contact" class="btn btn-danger m-2"><i id="i" class="fa fa-phone"></i>Contactez moi</a>
+      </div>
+
+    
+
+
+
+       <!--Ma cinquieme carte-->
+       <div class="col-md-5 bg-light shadow me-2 p-3 mt-5"  data-aos="flip-up">
+        <div class="cardre-img py-2">
+            <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+            <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+            <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+        </div>
+        <h4 class="text-primary  ">Apprenez et maitrisez  à installer un système windows et à interconnecter des ordinateurs via un reséau local </h4>
+        <p>Nous vous formons, à installer des systèmes exploitations windows et l'interconnection des machines entre eux via un réseau informatique enfin de partager les données entre des ordinateur  en <b> une semaine</b></p>
+        <a href="#contact" class="btn btn-secondary shadow m-2"><i id="i" class="fa fa-phone"></i>Contactez moi</a>
+      </div>
+   
+
+
+  <!--Ma sixieme carte-->
+    <div class="col-md-5  bg-light shadow p-3 mt-5"  data-aos="flip-up">
+      <div class="cardre-img py-2">
+          <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+          <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+          <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+      </div>
+      <h4 class="text-primary  ">Création des setup</h4>
+      <br class="dis">
+      <br class="dis">
+      <p>Apprenez et maîtrisez  à créer des setup de tout le programme de A et Z grâce à nos formations, pour une durée une semaine </b>
+      </p>
+      <a href="#contact" class="btn btn-info descrendre m-2"><i id="i" class="fa fa-phone"></i>Contactez moi</a>
+    </div>
+
+
+
+
+
+
+     <!--Ma septième carte-->
+     <div class="col-md-5 bg-light shadow me-2 p-3 mt-5"  data-aos="flip-up">
+      <div class="cardre-img py-2">
+          <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+          <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+          <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+      </div>
+      <h4 class="text-primary  ">Apprenez les bases de langage Java et du C#, et devenez un créateur des application  bureau(ordinateur) en concevant de logiciels avec ces derniers  </h4>
+      <p>Apprenez les bases de langages java et C# concevoir des applications d'entreprises  avec ce dernier en <b>1 mois</b></p>
+      <a href="#contact" class="btn btn-secondary shadow m-2"><i id="i" class="fa fa-phone"></i>Contactez moi</a>
+    </div>
+ 
+
+
+<!--Ma huitiem carte-->
+  <div class="col-md-5  bg-light shadow p-3 mt-5"  data-aos="flip-up">
+    <div class="cardre-img py-4">
+        <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+        <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+        <img src="icon/2303128_bookmark_favourite_marked_special_star_icon (1).png" alt="">
+    </div>
+    <h4 class="text-primary  ">Apprenez l'algorithme et les bases du langage python</h4>
+    <p>Apprenez et maîtrisez  les bases d'algorithme enfin de nager dans le monde de la programmation et Apprenez le langage python en <b> 4 semaines</b>  et <b> 2 semaines</b> pour d'algorithmique
+    </p>
+    <a href="#contact" class="btn btn-info descrendre m-2"><i id="i" class="fa fa-phone"></i>Contactez moi</a>
+  </div>
+    </div>
+</div>
+</div>
+
+  </div>
+
+
+</div>
+
+<!--PRIX DE NOS FORMATIONS-->
+<div class="container-fluid justify-content-center bg-light">
+  <div class="container ">
+    <h2 id="prix" class="prixFormation">PRIX DE NOS FORMATIONS</h2>
+    <dv class="container">
+      <div class="row">
+      <!--1-->
+        <div class="col-md-4 bg-white text-center mt-3 shadow p-2" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+          <h5 class="text-center">HTML5 ET CSS3</h5>
+          <p>48.000fc au lieu de <del>50.000fc</del>  <br> pour un mois</p>
+         
+
+             <div class="icon bg-primary mb-2">
+              <i class="fa fa-arrow-right"></i>
+             </div>
+        </div>
+ 
+
+ <!--2-->
+        <div class="col-md-4 bg-white text-center  mt-3 shadow p-2"data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+          <h5 class="text-center">BOOSTSTRAP 5</h5>
+          <p>40.000fc au lieu de <del>43.000fc</del> <br> pour 3 semaines</p>
+             <div class="icon bg-info">
+              <i class="fa fa-arrow-right"></i>
+             </div>
+        </div>
+ <!--3-->
+        <div class="col-md-4 bg-white text-center  mt-3 shadow p-2" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+          <h5 class="text-center">JAVASCRIPT</h5>
+          <p>46.000fc au lieu de <del>48.000fc</del> <br> pour 1 mois </p>
+             <div class="icon bg-success">
+              <i class="fa fa-arrow-right"></i>
+              
+             </div>
+        </div>
+
+        <!--4-->
+        <div class="col-md-4 bg-white text-center  mt-3 shadow p-2" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+          <h5 class="text-center">PHP</h5>
+          <p>42.000fc au lieu de <del>45.000fc</del> <br>  pour 1 mois </p>
+          <br>
+             <div class="icon bg-danger">
+              <i class="fa fa-arrow-right"></i>
+              
+             </div>
+        </div>
+        <!--5-->
+        <div class="col-md-4 bg-white text-center  mt-3 shadow p-3" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+          <h5 class="text-center">Creation d'un Setup</h5>
+      <p>Creation d'un setup(installateur) à 15.000fc au lieu de   <del>21.000fc</del>  pour une semaine </p>
+             <div class="icon bg-warning">
+              <i class="fa fa-arrow-right"></i>
+               </div>
+        </div>
+        <!--6-->
+        <div class="col-md-4 bg-white text-center  mt-3 shadow p-1" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+          <h5 class="text-center">CREATION DES APPLICATIONS BUREAU AVEC JAVA</h5>
+          <p>45.000fc au lieu de <del>50.000fc</del> pour 1 mois  </p>
+          <br>
+             <div class="icon bg-primary mb-2">
+              <i class="fa fa-arrow-right"></i>
+             
+             </div>
+        </div>
+ <!--7-->
+ <div class="col-md-4 bg-white text-center mt-3 shadow p-1" data-aos="flip-left"
+ data-aos-easing="ease-out-cubic"
+ data-aos-duration="2000">
+  <h5 class="text-center">CREATION DES APPLICATIONS BUREAU AVEC C#</h5>
+  <p>45.000fc au lieu de <del>50.000fc</del> <br>  pour 1 mois </p>
+     <div class="icon bg-primary">
+      <i class="fa fa-arrow-right"></i>
+      
+     </div>
+</div>
+ 
+
+<!--8-->
+<div class="col-md-4 bg-white text-center mt-3 shadow p-1"data-aos="flip-left"
+data-aos-easing="ease-out-cubic"
+data-aos-duration="2000">
+  <h5 class="text-center">INSTALLATION DE SYSTEME D'EXPLOITATION</h5>
+  <p>19.500fc au lieu de <del>25.000fc</del> <br> pour une semaine </p>
+     <div class="icon bg-primary">
+      <i class="fa fa-arrow-right"></i>
+      
+     </div>
+</div>
+ <!--9-->
+ <div class="col-md-4 bg-white text-center mt-3 shadow" data-aos="flip-left"
+ data-aos-easing="ease-out-cubic"
+ data-aos-duration="2000">
+  <h5 class="text-center texte">INSTALLATION DES LOGICIELS ET TELECHARGEMENT DES LOGICIELS</h5>
+  <p>10.000fc au lieu de <del>15.000fc</del> <br> pour une semaine </p>
+     <div class="icon bg-primary">
+      <i class="fa fa-arrow-right"></i>
+      
+     </div>
+</div>
+ <!--10-->
+ <div class="col-md-4 bg-white text-center mt-3 shadow" data-aos="flip-left"
+ data-aos-easing="ease-out-cubic"
+ data-aos-duration="2000">
+  <h5 class="text-center">BASE DE PYTHON</h5>
+  <p>25.000fc au lieu de <del>35.000fc</del> <br> pour 3 semaines</p>
+     <div class="icon bg-primary">
+      <i class="fa fa-arrow-right"></i>
+      
+     </div>
+</div>
+ <!--11-->
+ <div class="col-md-4 bg-white text-center mt-3 shadow" data-aos="flip-left"
+ data-aos-easing="ease-out-cubic"
+ data-aos-duration="2000">
+  <h5 class="text-center">BASE D'ALGORITHME</h5>
+  <p>26.000fc au lieu de <del>35.000fc</del> <br> pour 3 semaines </p>
+     <div class="icon bg-primary">
+      <i class="fa fa-arrow-right"></i>
+      <a href="" class="text-dark"></a>
+     </div>
+</div>
+
+<div class="col-md-4 bg-white text-center mt-3 shadow" data-aos="flip-left"
+data-aos-easing="ease-out-cubic"
+data-aos-duration="2000">
+  <h5 class="text-center">APPRENDRE WORD</h5>
+  <p>35.000fc au lieu de <del>38.000fc</del> </p>
+     <div class="icon bg-primary">
+      <i class="fa fa-arrow-right"></i>
+     
+     </div>
+</div>   
+      </div>
+    </dv>
+  </div>
+</div>
+
+
+<div class="container justify-content-center">
+  <div class="row">
+    <div class="col-md-4  text-center mt-3 shadow" data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000">
+      <h5 class="text-center">INTERCONNECTION DES ORDINATEUR VIA UN RESEAU LOCAL</h5>
+      <p>30.000fc au lieu de <del>33.000fc</del>  pour une semaine </p>
+         <div class="icon bg-secondary">
+          <i class="fa fa-arrow-right"></i>
+         </div>
+    </div>
+
+    <div class="col-md-4 text-center mt-3 shadow" data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000">
+      <h5 class="text-center">ANGULAR</h5>
+      <p>40.000fc au lieu de <del>45.000fc</del><br> pour 4 semaines </p>
+         <div class="icon bg-secondary">
+          <i class="fa fa-arrow-right"></i>
+         </div>
+    </div>
+
+    
+    </div>
+  </div>
+</div>
+
+<!--pied-->
+ 
+<div class="container-fluid bg-dark mt-4">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h3 class="text-white text-center">ADRESSE</h3>
+        <p class="text-center text-white">République démocratique du congo <br> Kongo-central
+          </p>
+    </div>
+    <div class="col-md-4">
+      <h3 class="text-white text-center">FREELANCER</h3>
+      <p class="text-center text-white">Je suis freelancer <br>n'hésite pas à me contacter.</p>
+     
+    </div>
+    <div class="col-md-4 text-center">
+      <h3 class="text-white" id="contact">CONCTACT</h3>
+      <p class="text-center text-white"> Contact :<b>+243842709316</b></p>
+                  <p class="text-center text-white"> whatsapp :<b>+243842709316</b></p>
+                  <div class="sociaux text-center pb-3">
+                    <a href="https://web.facebook.com/profile.php?id=100079766285257&sk=about_contact_and_basic_info"><img src="media/facebook.png" alt=""></a>
+                     <a href="mailto:mlelonkongo@gmail.com"><img src="media/gmail.png" alt=""></a>
+                     <a href=""><img src="media/telegram.png" alt=""></a>
+                     <a href="https//wa.me/+243842709316"><img src="media/whatsapp.png" alt=""></a>
+                  </div>
+    </div>
+  </div>
+  <h6 class="text-center text-white pb-3">Copyright © Dévéloppeur web 2023</h6>
+</div>
+</div>
+ 
+
+
+    <script defer src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> const lien=document.querySelector(".lien");
+      const barmenu=document.querySelector(".bar-menu");
+      const message=document.getElementById('message');
+      const email=document.getElementById('email');
+      const barFerme=document.querySelector('.bar-ferme');
+      const enleve1=document.querySelector(".enleve1");
+      const enleve2=document.querySelector(".enleve2");
+      const enleve3=document.querySelector(".enleve3");
+      const enleve4=document.querySelector(".enleve4");
+      
+
+
+      barmenu.addEventListener("click", ()=>{
+         lien.classList.toggle('ameneMenu');
+         barFerme.style.display="block";
+       barmenu.style.display="none";
+         
+       
+      })
+
+      barFerme.addEventListener("click", ()=>{
+         lien.classList.toggle('ameneMenu');
+         barFerme.style.display="none";
+         barmenu.style.display="block";
+
+         
+         
+       
+      })
+          
+      
+     //enleve lors du click a
+      enleve1.addEventListener("click",()=>{
+        lien.classList.remove("ameneMenu");
+        barFerme.style.display="none";
+        barmenu.style.display="block";
+       
+      });
+      enleve2.addEventListener("click",()=>{
+        lien.classList.remove("ameneMenu");
+        barFerme.style.display="none";
+        barmenu.style.display="block";
+       
+      });
+      enleve3.addEventListener("click",()=>{
+        lien.classList.remove("ameneMenu");
+        barFerme.style.display="none";
+        barmenu.style.display="block";
+       
+      });
+      enleve4.addEventListener("click",()=>{
+        lien.classList.remove("ameneMenu");
+        barFerme.style.display="none";
+        barmenu.style.display="block";
+       
+      });
+      
+
+
+      
+
+      const obs= new IntersectionObserver((ent) => {
+          for (const entr of ent) {
+            if(entr.isIntersecting){
+              entr.target.animate([
+              {transform: 'translateX(1000px)',opacity:0},
+                {transform: 'translateY(0)',opacity:2},
+                
+              ], {
+                duration:1500
+            })
+          }
+          }
+          
+        })
+        obs.observe(document.querySelector('.prixFormation'));
+
+
+        const observer= new IntersectionObserver((enties) => {
+          for (const entry of enties) {
+            if(entry.isIntersecting){
+              entry.target.animate([
+                {transform: 'translateY(-100px)',opacity:0},
+                {transform: 'translateY(0)',opacity:2},
+              ], {
+                duration:1500
+            })
+          }
+          } 
+        })
+       
+        observer.observe(document.querySelector('.image'));
+      
+
+
+        const observ= new IntersectionObserver((enties) => {
+          for (const entry of enties) {
+            if(entry.isIntersecting){
+              entry.target.animate([
+                {transform: 'translate(-100px)',opacity:0},
+                {transform: 'translate(0)',opacity:2},
+              ], {
+                duration:1500
+            })
+          }
+          } 
+        })
+       
+        observ.observe(document.querySelector('.message'));
+        observ.observe(document.querySelector('.nosformation'));
+      
+
+      
+</script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
